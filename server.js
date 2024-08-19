@@ -248,12 +248,7 @@ bot.onText(/\/start/, async msg => {
     };  
 
     // ذخیره کاربر در دیتابیس  
-    const newUser = new User({  
-        chatId,  
-        firstName: userName,  
-        lastName: userLastName  
-    });  
-
+    const newUser = new User({ chatId, firstName: userName, lastName: userLastName });  
     await newUser.save();  
 
     sendMessageWithOptions(chatId, welcomeMessage, startOptions);  
@@ -272,9 +267,9 @@ bot.on('callback_query', callbackQuery => {
             const amirInfo = `سلام من نیما هستم 21 سالمه`;  
             const inlineKeyboard = [  
                 [  
-                    { text: 'لینکدین من', url: amirlinkedinUrl },  
-                    { text: 'گیت‌هاب من', url: amirgithubUrl },  
-                    { text: 'تلگرام من', url: amirtelegramUrl },  
+                    { text: 'لینکدین من', url: 'https://www.linkedin.com/in/yourprofile/' },  // به روز رسانی با URL واقعی  
+                    { text: 'گیت‌هاب من', url: 'https://github.com/yourprofile' },  // به روز رسانی با URL واقعی  
+                    { text: 'تلگرام من', url: 'https://t.me/yourtelegram' },  // به روز رسانی با URL واقعی  
                 ],  
                 createBackButton(),  
             ];  
@@ -286,8 +281,8 @@ bot.on('callback_query', callbackQuery => {
             const channelsInfo = `اینها کانال‌های من هستند:`;  
             const channelsKeyboard = [  
                 [  
-                    { text: 'کانال تلگرام 1', url: 'URL_CHANNEL_1' },  
-                    { text: 'کانال تلگرام 2', url: 'URL_CHANNEL_2' },  
+                    { text: 'کانال تلگرام 1', url: 'https://t.me/your_channel_1' },  // تغییر به URL واقعی  
+                    { text: 'کانال تلگرام 2', url: 'https://t.me/your_channel_2' },  // تغییر به URL واقعی  
                 ],  
                 createBackButton(),  
             ];  
