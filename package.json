@@ -2,9 +2,9 @@
   "name": "telegram",
   "version": "1.0.0",
   "description": "",
-  "main": "yourBotFile.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon yourBotFile.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
